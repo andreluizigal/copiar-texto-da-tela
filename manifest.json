@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Copiar Texto da Tela",
+  "version": "1.1.0",
+  "description": "Selecione uma área da página e copie o texto dela, inclusive de imagens. O reconhecimento é feito no próprio computador.",
+  "minimum_chrome_version": "116",
+  "permissions": ["activeTab", "contextMenus", "scripting", "offscreen", "clipboardWrite"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Copiar texto de uma área da tela",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "commands": {
+    "start-selection": {
+      "suggested_key": { "default": "Alt+Shift+O" },
+      "description": "Selecionar uma área para copiar o texto"
+    }
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"
+  }
+}

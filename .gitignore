@@ -1,0 +1,4 @@
+# Arquivos gerados ao empacotar a extensão (a chave .pem é privada)
+*.crx
+*.pem
+*.zip
